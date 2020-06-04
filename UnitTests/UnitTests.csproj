@@ -55,6 +55,7 @@
     <Compile Include="TestSubtractionExpression.cs" />
     <Compile Include="TestMultiplyExpression.cs" />
     <Compile Include="TestDivideExpression.cs" />
+    <Compile Include="TestTrigonometryExpression.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

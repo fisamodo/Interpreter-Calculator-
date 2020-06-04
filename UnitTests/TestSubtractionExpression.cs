@@ -24,12 +24,7 @@ namespace UnitTests
         [TestMethod]
         public void SubtractionExpressionEvaluatesDifferenceInComplexExpression()
         {
-            Dictionary<string, MathFunction.Fun> functions = new Dictionary<string, MathFunction.Fun>
-            {
-                {"sin", Math.Sin },
-                {"cos", Math.Cos }
-
-            };
+            
             //mnozenje djeljenje testovi, cos i sin sa metodom
 
             // 2 + x - 7 + x - 10 + cos(x)
