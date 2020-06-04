@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgebraicExpressionInterpreter", "AlgebraicExpressionInterpreter\AlgebraicExpressionInterpreter.csproj", "{0AE28130-00AF-47D7-B0F1-F4DF60E2ABAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{51E0AAC7-31EE-403D-882A-946315028BF5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0AE28130-00AF-47D7-B0F1-F4DF60E2ABAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AE28130-00AF-47D7-B0F1-F4DF60E2ABAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AE28130-00AF-47D7-B0F1-F4DF60E2ABAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AE28130-00AF-47D7-B0F1-F4DF60E2ABAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51E0AAC7-31EE-403D-882A-946315028BF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51E0AAC7-31EE-403D-882A-946315028BF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51E0AAC7-31EE-403D-882A-946315028BF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51E0AAC7-31EE-403D-882A-946315028BF5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6617E9B7-3B80-4F81-80C3-429A32699217}
+	EndGlobalSection
+EndGlobal
