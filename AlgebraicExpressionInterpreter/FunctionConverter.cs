@@ -40,7 +40,16 @@ namespace AlgebraicExpressionInterpreter
         public string getFunctionName(string s)
         {
             var aStringBuilder = new StringBuilder(s);
-            aStringBuilder.Remove(3 ,3);
+            if(s.Length==7)
+            {
+                aStringBuilder.Remove(3, 4);
+
+            }
+            else
+            {
+                aStringBuilder.Remove(3, 3);
+
+            }
             s = aStringBuilder.ToString();
             return s;
         }

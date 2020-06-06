@@ -13,7 +13,7 @@ namespace UnitTests
 
             // 2 + cos(1) + x
             IExpression two = new Constant(2);
-            string function = "cos(1)";
+            string function = "cos(-1)";
             FunctionConverter f = new FunctionConverter();
             IExpression value = new Constant(f.getValue(function));
             IExpression mathFun = new MathFunction(f.Translator(function), value);
@@ -51,9 +51,9 @@ namespace UnitTests
         public void MathFunctionReturnsValueAndCalculatesTheSentenceWithUnknown1()
         {
 
-            // 2 + sin(1) + x
+            // 2 + sin(-1) + x
             IExpression two = new Constant(2);
-            string function = "sin(1)";
+            string function = "sin(-1)";
             FunctionConverter f = new FunctionConverter();
             IExpression value = new Constant(f.getValue(function));
             IExpression mathFun = new MathFunction(f.Translator(function), value);
@@ -65,7 +65,7 @@ namespace UnitTests
 
             var y = result.Interpret(c);
 
-            Assert.AreEqual(7.84, y, 2);
+            Assert.AreEqual(6.15, y, 2);
         }
         [TestMethod]
         public void MathFunctionReturnsValueAndCalculatesTheSentenceWithUnknown2()

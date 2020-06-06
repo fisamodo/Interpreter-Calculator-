@@ -27,7 +27,7 @@ namespace UnitTests
             
             //mnozenje djeljenje testovi, cos i sin sa metodom
 
-            // 2 + x - 7 + x - 10 + cos(x)
+            // 2 + x - 7 + x - 10 
             IExpression two = new Constant(2);
             IExpression x = new VariableX();
             IExpression seven = new Constant(7);
