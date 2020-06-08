@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,7 +15,10 @@ namespace AlgebraicExpressionInterpreter
                 {"cos", Math.Cos },
                 {"tan", Math.Tan },
                 {"ata", Math.Atan },
-                {"log", Math.Log }
+                {"log", Math.Log },
+                {"log10", Math.Log10 }
+
+
             };
         public MathFunction.Fun Translator(string s)
         {
@@ -32,6 +36,9 @@ namespace AlgebraicExpressionInterpreter
                     return functions[functionName];
                 case "log":
                     return functions[functionName];
+                case "log10":
+                    return functions[functionName];
+
                 default:
                     throw new NotImplementedException();
             }
@@ -39,19 +46,24 @@ namespace AlgebraicExpressionInterpreter
         }
         public string getFunctionName(string s)
         {
-            var aStringBuilder = new StringBuilder(s);
-            if(s.Length==7)
+            int leftP, rightP, signCheck;
+            leftP = s.IndexOf("(");
+            signCheck = s.IndexOf("-");
+            string fun = "-1";
+            if(signCheck==0)
             {
-                aStringBuilder.Remove(3, 4);
+                 fun = s.Substring(1, leftP);
+                 return fun;
+
 
             }
-            else
+            else if(signCheck != 0)
             {
-                aStringBuilder.Remove(3, 3);
-
+                 fun = s.Substring(0, leftP);
+                 return fun;
             }
-            s = aStringBuilder.ToString();
-            return s;
+            return fun;
+
         }
 
         public double getValue(string s)
@@ -63,13 +75,16 @@ namespace AlgebraicExpressionInterpreter
         }
         public string getFunctionValue(string s)
         {
+            int leftP, rightP;
+            leftP = s.IndexOf("(");
+
             string temp = s;
             var aStringBuilder = new StringBuilder(s);
-            int index = temp.IndexOf("(");
-            aStringBuilder.Remove(0, index+1);
+            aStringBuilder.Remove(0, leftP+1);
             temp = aStringBuilder.ToString();
-            index = temp.IndexOf(")");
-            aStringBuilder.Remove(index, 1);
+            rightP = temp.IndexOf(")");
+            temp = aStringBuilder.ToString();
+            aStringBuilder.Remove(rightP, 1);
             s = aStringBuilder.ToString();
             return s;
         }
