@@ -16,7 +16,7 @@ namespace AlgebraicExpressionInterpreter
                 {"tan", Math.Tan },
                 {"ata", Math.Atan },
                 {"log", Math.Log },
-                {"log10", Math.Log10 }
+                {"log10", Math.Log10 },
 
 
             };
@@ -46,23 +46,12 @@ namespace AlgebraicExpressionInterpreter
         }
         public string getFunctionName(string s)
         {
-            int leftP, rightP, signCheck;
+            int leftP;
             leftP = s.IndexOf("(");
-            signCheck = s.IndexOf("-");
-            string fun = "-1";
-            if(signCheck==0)
-            {
-                 fun = s.Substring(1, leftP);
-                 return fun;
-
-
-            }
-            else if(signCheck != 0)
-            {
-                 fun = s.Substring(0, leftP);
-                 return fun;
-            }
+            string fun;
+            fun = s.Substring(0, leftP);
             return fun;
+
 
         }
 
