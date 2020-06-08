@@ -191,7 +191,7 @@ namespace UnitTests
         public void MathFunctionReturnsValueAndCalculatesTheSentenceWithFunValueNegativeX()
         {
 
-            // 2 + cos(123) + x 
+            // 2 + log10(x) + x 
             IExpression two = new Constant(2);
             string function = "log10(x)";
             FunctionConverter f = new FunctionConverter();
